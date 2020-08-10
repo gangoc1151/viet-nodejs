@@ -3,7 +3,7 @@ const search = document.querySelector("input");
 const messageOne = document.querySelector("#messageOne");
 const messageTwo = document.querySelector("#messageTwo");
 
-messageOne.textContent = "error";
+messageOne.textContent = "";
 messageTwo.textContent = "";
 
 weatherForm.addEventListener("submit", (e) => {
