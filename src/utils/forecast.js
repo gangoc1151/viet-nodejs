@@ -14,12 +14,15 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback("unable to locate the location", undefined);
     } else {
+      console.log(body.current);
       callback(
         undefined,
         "it is currently " +
           body.current.temperature +
           " degrees out and the weather is " +
-          body.current.weather_descriptions[0]
+          body.current.weather_descriptions[0] +
+          ". this high today is " +
+          body.current.feelslike
       );
     }
   });
